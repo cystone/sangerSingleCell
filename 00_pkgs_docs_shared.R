@@ -1,8 +1,8 @@
 suppressMessages(library(tidyverse))
-suppressMessages(library(pacman))
 suppressMessages(library(data.table))
+suppressMessages(library(pacman))
 
-wkPath <- c('./download')
+wkPath <- c('./download', './processData')
 for(i in wkPath){
   wkPathi = i
   # wkPathi = paste0(sectionName, '/', i)
@@ -10,4 +10,3 @@ for(i in wkPath){
   if (!dir.exists(wkPathi)) dir.create(wkPathi)
 }
 rm(list=c('i', 'wkPathi', 'wkPath'))
-######
