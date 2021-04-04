@@ -1,4 +1,4 @@
-# sangerSingleCell
+# SingleCell
 https://scrnaseq-course.cog.sanger.ac.uk/website/tabula-muris.html 这个网站的教程
 
 ## 引言
@@ -29,3 +29,35 @@ git push origin master
 wget http://cf.10xgenomics.com/samples/cell-exp/1.1.0/pbmc3k/pbmc3k_filtered_gene_bc_matrices.tar.gz
 unzip pbmc3k_filtered_gene_bc_matrices.tar.gz
 ```
+
+## harmony
+
+单细胞分析十八般武艺1：harmony
+
+数据下载
+
+```bash
+wget https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE139324&format=file
+```
+
+## NicheNet
+
+安装NicheNet
+
+```R
+library(devtools)
+install_github("saeyslab/nichenetr")
+```
+
+下载数据：
+
+```R
+# 配体受体
+wget https://zenodo.org/record/3260758/files/ligand_target_matrix.rds
+wget https://zenodo.org/record/3260758/files/lr_network.rds
+wget https://zenodo.org/record/3260758/files/weighted_networks.rds
+
+#seurat对象
+wget https://zenodo.org/record/3531889/files/seuratObj.rds
+```
+
