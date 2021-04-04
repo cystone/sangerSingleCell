@@ -14,6 +14,13 @@ git pull origin main --allow-unrelated-histories
 git push --set-upstream origin master
 ````
 然后去网页端把默认分支设置成master
+报错：
+`fatal: unable to access 'https://github.com/cystone/sangerSingleCell.git/': LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443`
+解决
+```
+git config --global --add remote.origin.proxy
+git push origin master
+```
 
 10X 数据的终端下载:
 本教程使用的是来自10X Genomics平台测序的外周血单核细胞(PBMC)数据集，这个数据集是用Illumina NextSeq 500平台进行测序的，里面包含了2,700个细胞的RNA-seq数据。
